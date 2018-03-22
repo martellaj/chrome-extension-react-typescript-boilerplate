@@ -1,8 +1,6 @@
-# Outlook Chrome Extension
+# Chrome Extension (built with TypeScript + React)
 
-> This project was a hack for the OYG's March 2018 Fix Hack Learn week. It was primarily developed by myself, but with assistance from my colleague Jon Butler who developed the `Compose` experience (thanks, Jon!).
-
-![Screenshot](https://raw.githubusercontent.com/martellaj/outlook-chrome-extension/master/OCE%20Screenshot.png)
+> This project is a boilerplate project to allow you to quickly build chrome extensions using TypeScript and React.
 
 ## Building
 
@@ -15,3 +13,7 @@
 1.  Complete the steps to build the project above
 2.  Go to [_chrome://extensions_](chrome://extensions) in Google Chrome
 3.  With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this repo
+
+## Projects
+
+* [Outlook Chrome Extension](https://github.com/martellaj/outlook-chrome-extension)
