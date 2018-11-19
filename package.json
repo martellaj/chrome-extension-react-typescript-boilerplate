@@ -27,8 +27,6 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "@material-ui/core": "^3.5.1",
-    "@material-ui/icons": "^3.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
