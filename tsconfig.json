@@ -8,6 +8,7 @@
         "sourceMap": true,
         "jsx": "react",
         "lib": ["es2015", "dom"],
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true
     }
 }

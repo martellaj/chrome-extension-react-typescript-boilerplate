@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "watch": "webpack -w --config webpack.dev.js"
+    "watch": "webpack -w --config webpack.dev.js",
+    "lint": "tslint 'src/**/*.{ts, tsx}'"
   },
   "author": "Joe Martella",
   "license": "MIT",
@@ -18,6 +19,8 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "ts-loader": "^4.0.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-react": "^3.6.0",
     "typescript": "^2.7.2",
     "webpack": "^4.1.1",
     "webpack-cli": "^3.1.1",
