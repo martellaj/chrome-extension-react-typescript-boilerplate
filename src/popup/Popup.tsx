@@ -1,9 +1,10 @@
-import * as React from 'react';
 import './Popup.scss';
 
-interface AppProps {}
+import * as React from 'react';
 
-interface AppState {}
+interface AppProps { }
+
+interface AppState { }
 
 export default class Popup extends React.Component<AppProps, AppState> {
     constructor(props: AppProps, state: AppState) {
@@ -18,7 +19,7 @@ export default class Popup extends React.Component<AppProps, AppState> {
     render() {
         return (
             <div className="popupContainer">
-                Hello, world!
+                Hello, world!!!
             </div>
         )
     }

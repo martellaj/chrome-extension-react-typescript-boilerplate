@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -6,12 +7,11 @@ module.exports = {
     eventPage: path.join(__dirname, "src/eventPage.ts")
   },
   output: {
-    path: path.join(__dirname, "dist/js"),
+    path: path.join(__dirname, "dist"),
     filename: "[name].js"
   },
   module: {
-    rules: [
-      {
+    rules: [{
         exclude: /node_modules/,
         test: /\.tsx?$/,
         use: "ts-loader"
@@ -19,8 +19,7 @@ module.exports = {
       {
         exclude: /node_modules/,
         test: /\.scss$/,
-        use: [
-          {
+        use: [{
             loader: "style-loader" // Creates style nodes from JS strings
           },
           {
@@ -33,6 +32,21 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new CopyWebpackPlugin([{
+        from: 'src/assets',
+        to: 'assets'
+      },
+      {
+        from: 'src/popup.html',
+        to: 'popup.html'
+      },
+      {
+        from: 'manifest.json',
+        to: 'manifest.json'
+      },
+    ])
+  ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   }
