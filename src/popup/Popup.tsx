@@ -1,25 +1,11 @@
-import * as React from 'react';
-import './Popup.scss';
+import React, { useEffect } from "react";
+import "./Popup.scss";
 
-interface AppProps {}
+export default function Popup() {
+  useEffect(() => {
+    // Example of how to send a message to eventPage.ts.
+    chrome.runtime.sendMessage({ popupMounted: true });
+  }, []);
 
-interface AppState {}
-
-export default class Popup extends React.Component<AppProps, AppState> {
-    constructor(props: AppProps, state: AppState) {
-        super(props, state);
-    }
-
-    componentDidMount() {
-        // Example of how to send a message to eventPage.ts.
-        chrome.runtime.sendMessage({ popupMounted: true });
-    }
-
-    render() {
-        return (
-            <div className="popupContainer">
-                Hello, world!
-            </div>
-        )
-    }
+  return <div className="popupContainer">Hello, world!</div>;
 }
